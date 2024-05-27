@@ -128,11 +128,11 @@
 	<a href="<?php echo get_permalink( get_page_by_path( 'collections' ) ); ?>"
 	   class="group flex flex-row items-center justify-between mt-12 mx-auto max-w-7xl px-12 gap-x-2"
 	   title="See all free collections of Chinese writing worksheets">
-		<h2 class="font-light text-3xl text-grey-600">
+		<h2 class="font-light text-xl sm:text-3xl text-grey-600">
 			Free Collections
 		</h2>
 		<span
-			class="uppercase text-sm text-secondary-600 border border-secondary-600 px-6 py-1 rounded-full group-hover:bg-secondary-600 group-hover:text-white transition-colors duration-300">See all →</span>
+			class="uppercase text-sm text-secondary-600 border border-secondary-600 px-6 py-1 rounded-full group-hover:bg-secondary-600 group-hover:text-white transition-colors duration-300 whitespace-nowrap">See all →</span>
 	</a>
 	<div class="grid md:grid-cols-3 gap-6 mx-auto max-w-7xl mb-12 mt-4 px-6">
 		<?php foreach (
@@ -150,7 +150,7 @@
 			<a href="<?php echo get_permalink( $collection->ID ); ?>" class="bg-white p-6 shadow">
 				<div class="grid grid-cols-1">
 					<div class="">
-						<?php echo get_the_post_thumbnail( $collection->ID, 'wm-collection-top', [ 'class' => 'object-cover object-top w-full shadow' ] ); ?>
+						<?php echo get_the_post_thumbnail( $collection->ID, 'post-thumbnail', [ 'class' => 'object-cover object-top w-full shadow aspect-[1340/1000]' ] ); ?>
 					</div>
 					<div class="flex flex-row items-center gap-x-5 mt-4">
 						<?php foreach ( $groups as $group ) : ?>
@@ -178,11 +178,11 @@
 	<a href="<?php echo get_permalink( get_page_by_path( 'worksheets' ) ); ?>"
 	   class="group flex flex-row items-center justify-between mt-12 mx-auto max-w-7xl px-12 gap-x-2"
 	   title="See all free collections of Chinese writing worksheets">
-		<h2 class="font-light text-3xl text-grey-600">
+		<h2 class="font-light text-xl sm:text-3xl text-grey-600">
 			Free Worksheets
 		</h2>
 		<span
-			class="uppercase text-sm text-secondary-600 border border-secondary-600 px-6 py-1 rounded-full group-hover:bg-secondary-600 group-hover:text-white transition-colors duration-300">See all →</span>
+			class="uppercase text-sm text-secondary-600 border border-secondary-600 px-6 py-1 rounded-full group-hover:bg-secondary-600 group-hover:text-white transition-colors duration-300 whitespace-nowrap">See all →</span>
 	</a>
 	<div class="grid md:grid-cols-3 gap-6 mx-auto max-w-7xl mb-12 mt-4 px-6">
 		<?php foreach (
