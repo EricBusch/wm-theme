@@ -19,20 +19,18 @@
 					</button>
 				</div>
 			</a>
-			<?php
-			/*
 
 			<a href="#"
 			   class="bg-secondary-600 text-white p-6 shadow hover:shadow-xl group transition-shadow duration-300 rounded-md">
 				<div class="flex flex-col text-pretty">
 					<div>
-						<?php echo wp_get_attachment_image( 758, 'post-thumbnail', false, [ 'class' => 'object-cover h-20 w-auto shadow rounded-sm' ]  ); ?>
+						<?php echo wp_get_attachment_image( 831, 'post-thumbnail', false, [ 'class' => 'object-cover h-20 w-auto shadow rounded-sm' ]  ); ?>
 					</div>
 					<h5 class="font-bold leading-tight mt-3">
-						86 Pages of Different Chinese Writing Grids
+						188 Printable Chinese Character Practice Writing Grids
 					</h5>
 					<p class="text-sm mt-1">
-						Download our huge package of various writing grids. Never search for another grid again.
+						The new PDF with 188 printable Chinese character practice writing grids. Save 40% until June 30!
 					</p>
 					<button
 						class="bg-white text-secondary-900 p-2 mt-4 rounded-md text-center shadow-lg font-bold text-sm ring-2 ring-secondary-800">
@@ -40,8 +38,8 @@
 					</button>
 				</div>
 			</a>
-			*/
-			?>
+
+
 			<div class="bg-grey-600 text-white p-6 shadow rounded-md">
 				<div class="flex flex-col gap-2 text-pretty">
 					<h5 class="font-bold leading-tight">
