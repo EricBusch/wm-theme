@@ -30,6 +30,51 @@
 
 	<?php do_action( 'tailpress_header' ); ?>
 
+	<?php $notification = get_field( 'site_notification', 'option' ); ?>
+
+	<?php if ( $notification['notification_active'] === 'yes' ) : ?>
+
+		<?php
+		if ( $notification['notification_background_color'] === 'primary' ) {
+			$bg_class     = 'bg-primary-700';
+			$button_class = 'text-primary-800 ring-primary-800';
+		} elseif ( $notification['notification_background_color'] === 'secondary' ) {
+			$bg_class     = 'bg-secondary-600';
+			$button_class = 'text-secondary-800 ring-secondary-800';
+		} else {
+			$bg_class     = 'bg-grey-700';
+			$button_class = 'text-grey-800 ring-grey-800';
+		}
+		?>
+
+		<section class="<?php esc_attr_e( $bg_class ); ?>">
+			<a class="block py-5" href="<?php echo esc_url( $notification['notification_url'] ); ?>">
+				<div class="max-w-7xl mx-auto px-6">
+					<div class="flex flex-row items-center justify-between gap-6">
+						<div class="flex flex-col gap-y-0">
+							<?php if ( $notification['notification_heading'] ) : ?>
+								<div
+									class="text-white font-black"><?php echo wp_kses( $notification['notification_heading'], 'post' ); ?>
+								</div>
+							<?php endif; ?>
+							<?php if ( $notification['notification_description'] ) : ?>
+								<div
+									class="text-white text-sm"><?php echo wp_kses( $notification['notification_description'], 'post' ); ?>
+								</div>
+							<?php endif; ?>
+						</div>
+						<?php if ( $notification['notification_button_text'] ) : ?>
+							<button
+								class="bg-white rounded-md text px-6 py-3 font-bold text-sm shadow-md whitespace-nowrap ring-2 <?php esc_attr_e( $button_class ); ?>">
+								<?php echo wp_kses( $notification['notification_button_text'], 'post' ); ?>
+							</button>
+						<?php endif; ?>
+					</div>
+				</div>
+			</a>
+		</section>
+	<?php endif; ?>
+
 	<header class="bg-white border-b border-grey-200">
 
 		<div class="mx-auto max-w-7xl">
