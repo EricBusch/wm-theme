@@ -50,7 +50,7 @@
 		<section class="<?php esc_attr_e( $bg_class ); ?>">
 			<a class="block py-5" href="<?php echo esc_url( $notification['notification_url'] ); ?>">
 				<div class="max-w-7xl mx-auto px-6">
-					<div class="flex flex-row items-center justify-between gap-6">
+					<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
 						<div class="flex flex-col gap-y-0">
 							<?php if ( $notification['notification_heading'] ) : ?>
 								<div
