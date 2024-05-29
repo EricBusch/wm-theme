@@ -23,6 +23,6 @@ $align = 'text-' . ( $block['align'] ?? 'left' );
 	   class="<?php echo ! $is_preview ? 'text-white text-2xl bg-gradient-to-r from-secondary-500 to-pink-600 px-6 py-3 no-underline font-black rounded-lg leading-none shadow-md text-shadow-sm uppercase hover:shadow-sm transition-shadow duration-300' : ''; ?>"
 	   target="_blank"
 	   rel="noopener">
-		<?php esc_html_e( $text ); ?>
+		<?php echo wp_kses( $text, 'post' ); ?>
 	</a>
 </div>
