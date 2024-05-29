@@ -1,6 +1,6 @@
 <section>
 	<div class="max-w-7xl mx-auto px-6 mt-10">
-		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
+		<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8">
 			<a href="<?php echo esc_url( get_permalink( '778' ) ); ?>"
 			   class="bg-primary-600 text-white p-6 shadow hover:shadow-xl group transition-shadow duration-300 rounded-md">
 				<div class="flex flex-col text-pretty">
@@ -20,7 +20,7 @@
 				</div>
 			</a>
 
-			<a href="#"
+			<a href="https://writemandarin.com/product/188-printable-chinese-character-practice-writing-grids/"
 			   class="bg-secondary-600 text-white p-6 shadow hover:shadow-xl group transition-shadow duration-300 rounded-md">
 				<div class="flex flex-col text-pretty">
 					<div>
