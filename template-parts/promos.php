@@ -1,13 +1,15 @@
 <section>
 	<div class="max-w-7xl mx-auto px-6 mt-10">
-		<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8">
-			<a href="<?php echo esc_url( get_permalink( '778' ) ); ?>"
-			   class="bg-primary-600 text-white p-6 shadow hover:shadow-xl group transition-shadow duration-300 rounded-md">
+		<div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+			<?php $post_id = 778; ?>
+			<a href="<?php echo esc_url( get_permalink( $post_id ) ); ?>"
+			   class="bg-gradient-to-br from-primary-500 via-primary-600 to-emerald-600 text-white p-6 shadow hover:shadow-xl group transition-shadow duration-300 rounded-md">
 				<div class="flex flex-col text-pretty">
-					<div class="">
-						<?php echo wp_get_attachment_image( 791, 'post-thumbnail', false, [ 'class' => 'object-cover h-20 w-auto shadow rounded-sm' ] ); ?>
+					<div>
+						<?php echo get_the_post_thumbnail( $post_id, 'post-thumbnail', [ 'class' => 'object-cover w-full md:h-24 md:w-auto shadow rounded-sm' ] ); ?>
 					</div>
-					<h5 class="font-bold leading-tight mt-3">
+					<h5 class="font-bold leading-tight mt-3 text-pretty">
 						120 Most Common Chinese Radicals Flashcard Set
 					</h5>
 					<p class="text-sm mt-1">
@@ -20,11 +22,12 @@
 				</div>
 			</a>
 
-			<a href="https://writemandarin.com/product/188-printable-chinese-character-practice-writing-grids/"
-			   class="bg-secondary-600 text-white p-6 shadow hover:shadow-xl group transition-shadow duration-300 rounded-md">
+			<?php $post_id = 817; ?>
+			<a href="<?php echo esc_url( get_permalink( $post_id ) ); ?>"
+			   class="bg-gradient-to-br from-secondary-500 to-pink-600 text-white p-6 shadow hover:shadow-xl group transition-shadow duration-300 rounded-md">
 				<div class="flex flex-col text-pretty">
 					<div>
-						<?php echo wp_get_attachment_image( 831, 'post-thumbnail', false, [ 'class' => 'object-cover h-20 w-auto shadow rounded-sm' ]  ); ?>
+						<?php echo get_the_post_thumbnail( $post_id, 'post-thumbnail', [ 'class' => 'object-cover w-full md:h-24 md:w-auto shadow rounded-sm' ] ); ?>
 					</div>
 					<h5 class="font-bold leading-tight mt-3">
 						188 Printable Chinese Character Practice Writing Grids
