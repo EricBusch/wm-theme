@@ -1,25 +1,25 @@
 <?php get_header(); ?>
 
 <?php
-$large_grids = wm_get_all_grids( [
-	'tax_query' => [
-		[
-			'taxonomy' => 'grid-size',
-			'field'    => 'slug',
-			'terms'    => [ 'large' ]
-		]
-	]
-] );
-
-$medium_grids = wm_get_all_grids( [
-	'tax_query' => [
-		[
-			'taxonomy' => 'grid-size',
-			'field'    => 'slug',
-			'terms'    => [ 'medium' ]
-		]
-	]
-] );
+//$large_grids = wm_get_all_grids( [
+//	'tax_query' => [
+//		[
+//			'taxonomy' => 'grid-size',
+//			'field'    => 'slug',
+//			'terms'    => [ 'large' ]
+//		]
+//	]
+//] );
+//
+//$medium_grids = wm_get_all_grids( [
+//	'tax_query' => [
+//		[
+//			'taxonomy' => 'grid-size',
+//			'field'    => 'slug',
+//			'terms'    => [ 'medium' ]
+//		]
+//	]
+//] );
 
 $small_grids = wm_get_all_grids( [
 	'tax_query' => [
@@ -43,18 +43,47 @@ $small_grids = wm_get_all_grids( [
 					Free printable Chinese <span
 						class="bg-clip-text text-transparent bg-gradient-to-r from-secondary-500 to-pink-500">character writing grids</span>
 				</h1>
-				<p class="text-xl text-balance text-center mt-6 text-grey-700 leading-relaxed">
-					Download these <strong class="font-black">FREE Chinese character practice writing grids</strong> in three
-					different sizes and three different styles.
+				<p class="text-xl text-balance text-center mt-6 text-grey-700 leading-relaxed max-w-lg mx-auto">
+					Download these <strong class="font-black">FREE Chinese character practice writing grids</strong> in
+					three different styles.
 				</p>
 			</div>
 		</div>
 	</section>
 
-<?php do_action( 'wm_after_hero' ); ?>
+<?php /* do_action( 'wm_after_hero' ); */ ?>
+
+	<section>
+		<div class="max-w-7xl mx-auto px-6 mt-12">
+			<a href="<?php echo esc_url( get_permalink( 817 ) ); ?>"
+			   class="block p-8 bg-gradient-to-br from-secondary-500 to-pink-600 text-white rounded-xl shadow">
+				<div class="flex flex-col md:flex-row md:items-center gap-8">
+					<div class="w-full md:w-64 md:flex-shrink-0">
+						<?php echo get_the_post_thumbnail( 817, 'post-thumbnail', [ 'class' => 'rounded-md shadow' ] ); ?>
+					</div>
+					<div class="flex flex-col">
+						<h2 class="text-xl font-black text-pretty">Need more practice writing grids?</h2>
+						<p class="mt-2 mb-4">
+							We have 188 printable Chinese character practice writing grids! Large
+							grids, small grids, grid pyramids, bold grids, grids with guides, grids without guides,
+							etc... We have grids that will cover all of your needs now and in the future.
+						</p>
+						<button
+							class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-sm lg:text-base text-white rounded-lg text-balance w-full md:max-w-sm">
+							Download 188 Grid Worksheets Now!
+						</button>
+					</div>
+				</div>
+			</a>
+		</div>
+	</section>
 
 	<section>
 		<div class="max-w-7xl mx-auto px-6 pb-12">
+
+			<?php
+			/*
+
 			<div class="flex flex-col py-12">
 				<h2 class="text-2xl font-black px-4">Large Writing Grids</h2>
 				<p class="text-xl text-grey-600 max-w-3xl px-4 mt-2">
@@ -107,11 +136,14 @@ $small_grids = wm_get_all_grids( [
 					<?php endforeach; ?>
 				</div>
 			</div>
+			*/
+			?>
 
 			<div class="flex flex-col py-12">
-				<h2 class="text-2xl font-black px-4">Small Writing Grids</h2>
+				<h2 class="text-2xl font-black px-4">Writing Grids</h2>
 				<p class="text-xl text-grey-600 max-w-3xl px-4 mt-2">
-					These small Chinese Character writing grids are great for more experienced writers practicing small versions of your simplified and traditional Chinese characters.
+					These Chinese Character writing grids are great for practicing writing your simplified and
+					traditional Chinese characters.
 				</p>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 mt-6">
 					<?php foreach ( $small_grids as $small_grid ): ?>
