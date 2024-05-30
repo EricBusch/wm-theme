@@ -56,7 +56,11 @@
 			</div>
 		</div>
 		<div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-			<?php echo wp_get_attachment_image( 805, 'large', false, [ 'class' => 'lazy absolute inset-0 w-full h-full object-cover' ] ); ?>
+			<?php echo wp_get_attachment_image( 805, 'large', false, [
+				'class'   => 'lazy absolute inset-0 w-full h-full object-cover',
+				'loading' => 'lazy',
+				'alt'     => 'Hero image',
+			] ); ?>
 		</div>
 	</div>
 
@@ -83,7 +87,11 @@
 						Don't wait! Learn these radicals now to <span
 							class="font-bold">start learning Chinese faster!</span>
 					</p>
-					<?php echo wp_get_attachment_image( 793, 'large', false, [ 'class' => 'rounded-xl shadow-xl ring-8 ring-white mt-2' ] ); ?>
+					<?php echo wp_get_attachment_image( 793, 'large', false, [
+						'class'   => 'rounded-xl shadow-xl ring-8 ring-white mt-2',
+						'loading' => 'lazy',
+						'alt'     => 'Preview image of 120 Chinese radicals flashcard set',
+					] ); ?>
 					<button
 						class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap text-center mt-2">
 						Download Now
@@ -110,7 +118,11 @@
 							class="font-bold">cover all of your needs now and in the future</span>.
 
 					</p>
-					<?php echo get_the_post_thumbnail( $post_id, 'post-thumbnail', [ 'class' => 'rounded-xl shadow-xl ring-8 ring-white mt-2' ] ); ?>
+					<?php echo get_the_post_thumbnail( $post_id, 'post-thumbnail', [
+						'class'   => 'rounded-xl shadow-xl ring-8 ring-white mt-2',
+						'loading' => 'lazy',
+						'alt'     => 'Preview image of 188 printable Chinese character practice writing grids',
+					] ); ?>
 					<button
 						class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap text-center mt-2">
 						Download Now
@@ -177,7 +189,11 @@
 			<a href="<?php echo get_permalink( $collection->ID ); ?>" class="bg-white p-6 shadow">
 				<div class="grid grid-cols-1">
 					<div class="">
-						<?php echo get_the_post_thumbnail( $collection->ID, 'post-thumbnail', [ 'class' => 'object-cover object-top w-full shadow aspect-[1340/1000]' ] ); ?>
+						<?php echo get_the_post_thumbnail( $collection->ID, 'post-thumbnail', [
+							'class'   => 'object-cover object-top w-full shadow aspect-[1340/1000]',
+							'loading' => 'lazy',
+							'alt'     => 'Preview image of ' . esc_attr( $collection->post_title ) . ' worksheet collection',
+						] ); ?>
 					</div>
 					<div class="flex flex-row items-center gap-x-5 mt-4">
 						<?php foreach ( $groups as $group ) : ?>
@@ -226,7 +242,11 @@
 			<a href="<?php echo get_permalink( $worksheet->ID ); ?>" class="bg-white p-6 shadow">
 				<div class="grid grid-cols-1">
 					<div class="">
-						<?php echo get_the_post_thumbnail( $worksheet->ID, 'post-thumbnail', [ 'class' => 'object-cover object-top w-full shadow border border-grey-600' ] ); ?>
+						<?php echo get_the_post_thumbnail( $worksheet->ID, 'post-thumbnail', [
+							'class'   => 'object-cover object-top w-full shadow border border-grey-600',
+							'loading' => 'lazy',
+							'alt'     => 'Preview image of ' . esc_attr( $worksheet->post_title ) . ' worksheet',
+						] ); ?>
 					</div>
 					<div class="flex flex-row items-center gap-x-5 mt-4">
 						<?php foreach ( $themes as $theme ) : ?>

@@ -7,7 +7,11 @@
 			   class="bg-gradient-to-br from-primary-500 via-primary-600 to-emerald-600 text-white p-6 shadow hover:shadow-xl group transition-shadow duration-300 rounded-md">
 				<div class="flex flex-col text-pretty">
 					<div>
-						<?php echo get_the_post_thumbnail( $post_id, 'post-thumbnail', [ 'class' => 'object-cover w-full md:h-24 md:w-auto shadow rounded-sm' ] ); ?>
+						<?php echo get_the_post_thumbnail( $post_id, 'post-thumbnail', [
+							'class'   => 'object-cover w-full md:h-24 md:w-auto shadow rounded-sm',
+							'loading' => 'lazy',
+							'alt'     => 'Preview image of 120 Most Common Chinese Radicals Flashcard Set',
+						] ); ?>
 					</div>
 					<h5 class="font-bold leading-tight mt-3 text-pretty">
 						120 Most Common Chinese Radicals Flashcard Set
@@ -27,7 +31,11 @@
 			   class="bg-gradient-to-br from-secondary-500 to-pink-600 text-white p-6 shadow hover:shadow-xl group transition-shadow duration-300 rounded-md">
 				<div class="flex flex-col text-pretty">
 					<div>
-						<?php echo get_the_post_thumbnail( $post_id, 'post-thumbnail', [ 'class' => 'object-cover w-full md:h-24 md:w-auto shadow rounded-sm' ] ); ?>
+						<?php echo get_the_post_thumbnail( $post_id, 'post-thumbnail', [
+							'class'   => 'object-cover w-full md:h-24 md:w-auto shadow rounded-sm',
+							'loading' => 'lazy',
+							'alt'     => 'Preview image of 188 Printable Chinese Character Practice Writing Grids',
+						] ); ?>
 					</div>
 					<h5 class="font-bold leading-tight mt-3">
 						188 Printable Chinese Character Practice Writing Grids

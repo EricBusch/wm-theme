@@ -39,7 +39,11 @@
 			<a href="<?php echo get_permalink( $worksheet->ID ); ?>"
 			   class="bg-white shadow rounded overflow-hidden hover:shadow-xl transition-shadow duration-300">
 				<div class="">
-					<?php echo get_the_post_thumbnail( $worksheet->ID, 'large', [ 'class' => 'p-2' ] ); ?>
+					<?php echo get_the_post_thumbnail( $worksheet->ID, 'large', [
+						'class'   => 'p-2',
+						'loading' => 'lazy',
+						'alt'     => 'Preview image of ' . esc_attr( $worksheet->post_title ) . ' worksheet',
+					] ); ?>
 				</div>
 				<div class="flex flex-col gap-y-2.5 px-6 pb-6 mt-2">
 					<div class="flex flex-row items-center justify-between gap-x-1.5">

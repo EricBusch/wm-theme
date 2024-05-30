@@ -48,7 +48,11 @@
 					these <?php esc_html_e( $page_count ); ?> printable PDF worksheets.
 				</p>
 				<div class="">
-					<?php echo get_the_post_thumbnail( $collection->ID, 'post-thumbnail', [ 'class' => 'object-cover object-top w-full aspect-[400/108]' ] ); ?>
+					<?php echo get_the_post_thumbnail( $collection->ID, 'post-thumbnail', [
+						'class'   => 'object-cover object-top w-full aspect-[400/108]',
+						'loading' => 'lazy',
+						'alt'     => 'Preview image of ' . esc_attr( $collection->post_title ) . ' worksheet collection',
+					] ); ?>
 				</div>
 				<div class="flex flex-col gap-y-2.5 px-6 pb-6 mt-6">
 					<?php foreach ( $words as $word ) : ?>

@@ -37,7 +37,11 @@
 				</div>
 				<div class="md:col-span-4 order-1 md:order-2">
 					<div class="flex flex-row items-center justify-center h-full">
-						<?php echo get_the_post_thumbnail( get_the_ID(), 'wm-collection-top', [ 'class' => 'object-cover object-top w-full shadow' ] ); ?>
+						<?php echo get_the_post_thumbnail( get_the_ID(), 'wm-collection-top', [
+							'class'   => 'object-cover object-top w-full shadow',
+							'loading' => 'lazy',
+							'alt'     => 'Preview image of ' . esc_attr( get_the_title() ) . ' writing worksheet',
+						] ); ?>
 					</div>
 				</div>
 			</div>
@@ -98,7 +102,10 @@
 						<?php foreach ( $related_worksheets as $related_worksheet ) : ?>
 							<a href="<?php echo esc_url( get_permalink( $related_worksheet->ID ) ); ?>"
 							   class="bg-white shadow p-2">
-								<?php echo get_the_post_thumbnail( $related_worksheet->ID ); ?>
+								<?php echo get_the_post_thumbnail( $related_worksheet->ID, 'post-thumbnail', [
+									'loading' => 'lazy',
+									'alt'     => 'Preview image of related writing worksheet',
+								] ); ?>
 								<div class="text-sm font-medium">
 									<?php esc_html_e( $related_worksheet->post_title ); ?>
 								</div>

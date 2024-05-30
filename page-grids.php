@@ -59,7 +59,11 @@ $small_grids = wm_get_all_grids( [
 			   class="block p-8 bg-gradient-to-br from-secondary-500 to-pink-600 text-white rounded-xl shadow">
 				<div class="flex flex-col md:flex-row md:items-center gap-8">
 					<div class="w-full md:w-64 md:flex-shrink-0">
-						<?php echo get_the_post_thumbnail( 817, 'post-thumbnail', [ 'class' => 'rounded-md shadow' ] ); ?>
+						<?php echo get_the_post_thumbnail( 817, 'post-thumbnail', [
+							'class'   => 'rounded-md shadow',
+							'loading' => 'lazy',
+							'alt'     => 'Preview image of 188 practice writing grid worksheets',
+						] ); ?>
 					</div>
 					<div class="flex flex-col">
 						<h2 class="text-xl font-black text-pretty">Need more practice writing grids?</h2>
@@ -150,7 +154,11 @@ $small_grids = wm_get_all_grids( [
 						<a href="<?php echo esc_url( wm_get_download_url( $small_grid->ID ) ); ?>"
 						   target="_blank" rel="noopener"
 						   class="bg-white p-4 shadow-md hover:shadow-xl transition-shadow duration-300">
-							<?php echo get_the_post_thumbnail( $small_grid->ID, 'post-thumbnail', [ 'class' => 'border border-grey-400 shadow rounded' ] ); ?>
+							<?php echo get_the_post_thumbnail( $small_grid->ID, 'post-thumbnail', [
+								'class'   => 'border border-grey-400 shadow rounded',
+								'loading' => 'lazy',
+								'alt'     => 'Preview image of ' . esc_attr( $small_grid->post_title ) . ' grid worksheet',
+							] ); ?>
 							<div class="flex flex-row items-center justify-between mt-4 gap-x-4">
 								<div class="text-sm font-bold"><?php esc_html_e( $small_grid->post_title ); ?></div>
 								<div class="">

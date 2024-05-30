@@ -33,7 +33,11 @@
 				</div>
 				<div class="md:col-span-4 order-1 md:order-2">
 					<div class="flex flex-row items-center justify-center h-full">
-						<?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail', [ 'class' => 'object-cover object-top w-full shadow aspect-[1340/1000]' ] ); ?>
+						<?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail', [
+							'class'   => 'object-cover object-top w-full shadow aspect-[1340/1000]',
+							'loading' => 'lazy',
+							'alt'     => 'Preview image of ' . esc_attr( get_the_title() ) . ' worksheet collection',
+						] ); ?>
 					</div>
 				</div>
 			</div>
@@ -144,7 +148,11 @@
 									   target="_blank"
 									   rel="noopener"
 									   class="flex flex-col text-xs bg-white p-2 shadow">
-										<?php echo get_the_post_thumbnail( $sample->ID, 'post-thumbnail', [ 'class' => 'border border-grey-300' ] ); ?>
+										<?php echo get_the_post_thumbnail( $sample->ID, 'post-thumbnail', [
+											'class'   => 'border border-grey-300',
+											'loading' => 'lazy',
+											'alt'     => 'Sample worksheet image',
+										] ); ?>
 										<div
 											class="font-bold mt-2 leading-tight"><?php esc_html_e( $sample->post_title ); ?></div>
 										<div
@@ -178,8 +186,11 @@
 						<?php foreach ( $related_collections as $related_collection ) : ?>
 							<a href="<?php echo esc_url( get_permalink( $related_collection->ID ) ); ?>"
 							   class="bg-white shadow">
-								<?php echo get_the_post_thumbnail( $related_collection->ID, 'post-thumbnail', [ 'class' => 'object-cover object-top w-full aspect-[1340/1000]' ] ); ?>
-<!--								--><?php //echo get_the_post_thumbnail( $related_collection->ID, 'wm-collection-top' ); ?>
+								<?php echo get_the_post_thumbnail( $related_collection->ID, 'post-thumbnail', [
+									'class'   => 'object-cover object-top w-full aspect-[1340/1000]',
+									'loading' => 'lazy',
+									'alt'     => 'Preview image of related worksheet collection',
+								] ); ?>
 								<div class="text-sm font-semibold mt-2 truncate px-4 pb-2 text-grey-600">
 									<?php esc_html_e( $related_collection->post_title ); ?>
 								</div>
