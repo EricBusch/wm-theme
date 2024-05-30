@@ -63,20 +63,16 @@
 
 	<div class="mx-auto max-w-7xl my-12 sm:px-6">
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-			<div class="lg:col-span-8 bg-gradient-to-b from-primary-600 to-primary-500 text-white">
+			<?php $post_id = 778; ?>
+			<a href="<?php echo esc_url( get_permalink( $post_id ) ); ?>"
+			   class="lg:col-span-6 bg-gradient-to-b from-primary-600 to-primary-500 text-white">
 				<div class="flex flex-col gap-y-6 p-10 sm:p-16">
 					<div class="flex flex-col sm:flex-row gap-6 sm:justify-between sm:items-center">
 						<div class="flex flex-col gap-y-1 lg:gap-y-0">
 							<div class="uppercase tracking-widest opacity-70 font-black text-xs">Flashcard Set</div>
-							<h2 class="text-xl sm:text-2xl font-black uppercase leading-tight text-balance">120 Most
+							<h2 class="text-xl sm:text-2xl font-black uppercase leading-tight text-pretty">120 Most
 								Common Radicals
 							</h2>
-						</div>
-						<div class="">
-							<a href="<?php echo esc_url( get_permalink( '778' ) ); ?>"
-							   class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap max-w-sm">
-								Download Now
-							</a>
 						</div>
 					</div>
 					<p class="text-xl">
@@ -88,38 +84,69 @@
 							class="font-bold">start learning Chinese faster!</span>
 					</p>
 					<?php echo wp_get_attachment_image( 793, 'large', false, [ 'class' => 'rounded-xl shadow-xl ring-8 ring-white mt-2' ] ); ?>
+					<button
+						class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap text-center mt-2">
+						Download Now
+					</button>
 				</div>
-			</div>
-			<div class="lg:col-span-4 bg-secondary-500 text-white">
+			</a>
+			<?php $post_id = 817; ?>
+			<a href="<?php echo esc_url( get_permalink( $post_id ) ); ?>"
+			   class="lg:col-span-6 bg-gradient-to-br from-secondary-500 to-pink-600 text-white">
 				<div class="flex flex-col gap-y-6 p-10 sm:p-16">
-					<h2 class="text-xl sm:text-2xl font-black uppercase leading-tight text-balance">
-						Subscribe to our Newsletter
-					</h2>
-					<p class="text-lg">
-						Sign up to receive email updates
-						when we release new worksheets and flashcards.
-					</p>
-					<div>
-						<form action="https://gumroad.com/follow_from_embed_form"
-						      method="post"
-						      class="flex flex-col gap-y-4">
-							<input name="seller_id" type="hidden" value="1001845423033"/>
-							<input name="email"
-							       aria-label="Email address"
-							       type="email"
-							       class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out shadow-inner"
-							       placeholder="Email address..."
-							       required>
-							<div class="">
-								<button type="submit"
-								        class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap max-w-sm">
-									Subscribe
-								</button>
-							</div>
-						</form>
+					<div class="flex flex-col sm:flex-row gap-6 sm:justify-between sm:items-center">
+						<div class="flex flex-col gap-y-1 lg:gap-y-0">
+							<div class="uppercase tracking-widest opacity-70 font-black text-xs">Grids</div>
+							<h2 class="text-xl sm:text-2xl font-black uppercase leading-tight text-pretty">
+								188 Practice Grid Worksheets
+							</h2>
+						</div>
 					</div>
-					<p class="text-sm">No Spam! Unsubscribe anytime.</p>
+					<p class="text-xl">
+						We have <span
+							class="font-bold">188 printable Chinese character practice writing grids!</span> Large
+						grids, small grids, grid pyramids, bold grids, grids with guides, grids without guides,
+						etc... We have grids that will <span
+							class="font-bold">cover all of your needs now and in the future</span>.
+
+					</p>
+					<?php echo get_the_post_thumbnail( $post_id, 'post-thumbnail', [ 'class' => 'rounded-xl shadow-xl ring-8 ring-white mt-2' ] ); ?>
+					<button
+						class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap text-center mt-2">
+						Download Now
+					</button>
 				</div>
+			</a>
+		</div>
+		<div class="lg:col-span-6 bg-gradient-to-br from-grey-500 to-grey-600 text-white mt-12">
+			<div class="flex flex-col gap-y-6 p-10 sm:p-16">
+				<h2 class="text-xl sm:text-2xl font-black uppercase leading-tight text-balance">
+					Subscribe to our Newsletter
+				</h2>
+				<p class="text-lg">
+					Sign up to receive email updates
+					when we release new worksheets and flashcards.
+				</p>
+				<div>
+					<form action="https://gumroad.com/follow_from_embed_form"
+					      method="post"
+					      class="flex flex-col gap-y-4">
+						<input name="seller_id" type="hidden" value="1001845423033"/>
+						<input name="email"
+						       aria-label="Email address"
+						       type="email"
+						       class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out shadow-inner"
+						       placeholder="Email address..."
+						       required>
+						<div class="">
+							<button type="submit"
+							        class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap max-w-sm">
+								Subscribe
+							</button>
+						</div>
+					</form>
+				</div>
+				<p class="text-sm">No Spam! Unsubscribe anytime.</p>
 			</div>
 		</div>
 	</div>
