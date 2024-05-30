@@ -4,6 +4,7 @@
 <?php $eng = get_field( 'eng', get_the_ID() ); ?>
 <?php $zhs = get_field( 'zhs', get_the_ID() ); ?>
 <?php $term = wp_get_post_terms( get_the_ID(), 'worksheet_theme' )[0]; ?>
+<?php $download_count = absint( get_field( 'download_count', get_the_ID() ) ); ?>
 <?php $related_worksheets = wm_get_all_worksheets( [
 	'tax_query'    => [
 		[
@@ -77,10 +78,16 @@
 						<div class="font-bold">Created</div>
 						<div class=""><?php esc_html_e( get_the_date( 'F j, Y', ) ); ?></div>
 					</div>
-					<div class="flex flex-row items-center justify-between py-3 lg:px-2">
+					<div class="flex flex-row items-center justify-between py-3 lg:px-2 border-b border-grey-200">
 						<div class="font-bold">Price</div>
 						<div class="">Free</div>
 					</div>
+					<?php if ( wm_current_user_is_admin() ) : ?>
+						<div class="flex flex-row items-center justify-between py-3 lg:px-2">
+							<div class="font-bold">Downloads</div>
+							<div class=""><?php esc_html_e( $download_count ); ?></div>
+						</div>
+					<?php endif; ?>
 					<a href="<?php echo esc_url( wm_get_download_url( get_the_ID() ) ); ?>"
 					   target="_blank" rel="noopener"
 					   class="w-full mt-6 text-center font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap">
