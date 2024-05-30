@@ -54,12 +54,12 @@
 						<div class="flex flex-col gap-y-0">
 							<?php if ( $notification['notification_heading'] ) : ?>
 								<div
-									class="text-white font-black"><?php echo wp_kses( $notification['notification_heading'], 'post' ); ?>
+									class="text-white font-black text-pretty leading-tight"><?php echo wp_kses( $notification['notification_heading'], 'post' ); ?>
 								</div>
 							<?php endif; ?>
 							<?php if ( $notification['notification_description'] ) : ?>
 								<div
-									class="text-white text-sm"><?php echo wp_kses( $notification['notification_description'], 'post' ); ?>
+									class="text-white text-sm text-pretty mt-2 md:mt-1"><?php echo wp_kses( $notification['notification_description'], 'post' ); ?>
 								</div>
 							<?php endif; ?>
 						</div>
