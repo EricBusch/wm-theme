@@ -93,17 +93,22 @@
 					   class="w-full mt-6 text-center font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap">
 						Download Now
 					</a>
-					<form action="<?php echo esc_url( get_permalink( get_page_by_path( 'download' ) ) ); ?>"
-					      method="GET"
-					      target="_blank">
-						<?php foreach ( wm_get_download_input_fields( get_the_ID() ) as $k => $v ) : ?>
-							<?php printf( '<input type="hidden" name="%s" value="%s" />', esc_attr( $k ), esc_html( $v ) ); ?>
-						<?php endforeach; ?>
-						<div class="cf-turnstile"
-						     data-sitekey="<?php esc_attr_e( TURNSTILE_SITE_KEY ); ?>"
-						     data-theme="light"></div>
-						<button type="submit" class="w-full mt-6 text-center font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap">Download</button>
-					</form>
+					<?php if ( wm_current_user_is_admin() ) : ?>
+						<form action="<?php echo esc_url( get_permalink( get_page_by_path( 'download' ) ) ); ?>"
+						      method="GET"
+						      target="_blank">
+							<?php foreach ( wm_get_download_input_fields( get_the_ID() ) as $k => $v ) : ?>
+								<?php printf( '<input type="hidden" name="%s" value="%s" />', esc_attr( $k ), esc_html( $v ) ); ?>
+							<?php endforeach; ?>
+							<div class="cf-turnstile"
+							     data-sitekey="<?php esc_attr_e( TURNSTILE_SITE_KEY ); ?>"
+							     data-theme="light"></div>
+							<button type="submit"
+							        class="w-full mt-6 text-center font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap">
+								Download
+							</button>
+						</form>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
