@@ -20,6 +20,7 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ef5f40">
 	<meta name="msapplication-TileColor" content="#377a84">
 	<meta name="theme-color" content="#377a84">
+	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 </head>
 
 <body <?php body_class( 'bg-grey-50 text-gray-900 antialiased font-sans' ); ?>>
