@@ -22,7 +22,7 @@
 	<meta name="theme-color" content="#377a84">
 
 	<?php if ( wm_current_user_is_admin() ) : ?>
-		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
 	<?php endif; ?>
 </head>
 
