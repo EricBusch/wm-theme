@@ -89,7 +89,7 @@
 						</div>
 					<?php endif; ?>
 					<a href="<?php echo esc_url( wm_get_download_url( get_the_ID() ) ); ?>"
-					   target="_blank" rel="noopener"
+					   target="_blank" rel="noopener noindex"
 					   class="w-full mt-6 text-center font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap">
 						Download Now
 					</a>

@@ -152,7 +152,7 @@ $small_grids = wm_get_all_grids( [
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 mt-6">
 					<?php foreach ( $small_grids as $small_grid ): ?>
 						<a href="<?php echo esc_url( wm_get_download_url( $small_grid->ID ) ); ?>"
-						   target="_blank" rel="noopener"
+						   target="_blank" rel="noopener noindex"
 						   class="bg-white p-4 shadow-md hover:shadow-xl transition-shadow duration-300">
 							<?php echo get_the_post_thumbnail( $small_grid->ID, 'post-thumbnail', [
 								'class'   => 'border border-grey-400 shadow rounded',
