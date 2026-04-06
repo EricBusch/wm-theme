@@ -140,23 +140,24 @@
 					when we release new worksheets and flashcards.
 				</p>
 				<div>
-					<form action="https://gumroad.com/follow_from_embed_form"
-					      method="post"
-					      class="flex flex-col gap-y-4">
-						<input name="seller_id" type="hidden" value="1001845423033"/>
-						<input name="email"
-						       aria-label="Email address"
-						       type="email"
-						       class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out shadow-inner"
-						       placeholder="Email address..."
-						       required>
-						<div class="">
-							<button type="submit"
-							        class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap max-w-sm">
-								Subscribe
-							</button>
-						</div>
-					</form>
+                    <form action="https://app.kit.com/forms/9293683/subscriptions"
+                          method="post"
+                          data-sv-form="9293683"
+                          data-uid="608e888155"
+                          class="seva-form formkit-form flex flex-col gap-y-2 mt-2">
+                        <input name="email_address"
+                               aria-label="Email address"
+                               type="email"
+                               class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out shadow-inner"
+                               placeholder="Email address..."
+                               required>
+                        <div class="">
+                            <button type="submit"
+                                    class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap max-w-sm">
+                                Join Now
+                            </button>
+                        </div>
+                    </form>
 				</div>
 				<p class="text-sm">No Spam! Unsubscribe anytime.</p>
 			</div>
