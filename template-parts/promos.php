@@ -41,7 +41,7 @@
 						188 Printable Chinese Character Practice Writing Grids
 					</h5>
 					<p class="text-sm mt-1">
-						The new PDF with 188 printable Chinese character practice writing grids. Save 40% until June 30!
+						The new PDF with 188 printable Chinese character practice writing grids.
 					</p>
 					<button
 						class="bg-white text-secondary-900 p-2 mt-4 rounded-md text-center shadow-lg font-bold text-sm ring-2 ring-secondary-800">
