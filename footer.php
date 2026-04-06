@@ -43,9 +43,7 @@
                 <div>
                     <form action="https://app.kit.com/forms/9293683/subscriptions"
                           method="post"
-                          data-sv-form="9293683"
-                          data-uid="608e888155"
-                          class="seva-form formkit-form flex flex-col gap-y-2 mt-2">
+                          class="flex flex-col gap-y-2 mt-2">
                         <input name="email_address"
                                aria-label="Email address"
                                type="email"
@@ -55,7 +53,7 @@
                         <div class="">
                             <button type="submit"
                                     class="font-bold uppercase shadow px-6 py-3 bg-gradient-to-b from-grey-700 to-grey-900 text-white rounded-lg whitespace-nowrap max-w-sm">
-                                Join Now
+                                Join
                             </button>
                         </div>
                     </form>
@@ -74,8 +72,6 @@
 </div>
 
 <?php wp_footer(); ?>
-
-<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 
 </body>
 </html>
